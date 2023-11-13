@@ -1,3 +1,25 @@
+- @todo
+
+  - 优化简历
+  - 常见的面试题目
+  - 常见的算法
+
+- @ques 有没有 rust 工作？
+
+## 优化简历
+
+- 小程序开发经验
+
+### 2023-11-13 18:34:50
+
+- 突出 rust 经验
+
+- solidjs 的经验
+
+- 突出新的日历组建
+
+## 2023-11-13 16:19:34
+
 - @ques https://www.cnblogs.com/gaochundong/p/binary_search_tree.html
 
 - @ques
