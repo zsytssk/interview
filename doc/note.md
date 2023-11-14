@@ -20,9 +20,9 @@
 
 -? 二分查找法
 
-- https://frontendmasters.com/courses/algorithms/linked-list-data-structures/
-
 ## 2023-11-14 17:23:20
+
+- @ques 二分查找法
 
 - @ques sorted array -> binary search
 
