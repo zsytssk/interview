@@ -13,12 +13,22 @@
 ## 常见的算法
 
 - @todo 数据结构
+
   - array | linkList
+
 - @todo 算法
 
 -? 二分查找法
 
 - https://frontendmasters.com/courses/algorithms/linked-list-data-structures/
+
+## 2023-11-14 17:23:20
+
+- @ques sorted array -> binary search
+
+- 排序
+  - 冒泡排序
+  - binary sort -> quick sorted
 
 ## 优化简历
 
