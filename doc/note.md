@@ -1,16 +1,44 @@
 - @todo
 
-  - 优化简历
-  - 常见的面试题目
   - 常见的算法
+  - 常见的面试题目
+    - 常见的前端面试题
+    - ts 常见题目
+    - react 常见题目
+  - ***
+  - 优化简历
 
 - @ques 有没有 rust 工作？
 
+## 常见的算法
+
+- @todo 数据结构
+  - array | linkList
+- @todo 算法
+
+-? 二分查找法
+
+- https://frontendmasters.com/courses/algorithms/linked-list-data-structures/
+
 ## 优化简历
+
+### end
 
 - 小程序开发经验
 
-### 2023-11-13 18:34:50
+```
+- 喜家德项目遇到的问题以及如何解决的
+
+  - taro 项目基本介绍 `taro-init` 启动 组件 打包...
+  - 状态管理 zusland 自从使用之后，我就喜欢上了 zusland
+  - 公共组件 -> 自己写
+  - socket 问题 支付宝 socket 问题 （单独文件）
+  - 支付宝无法监听支付成功 -> 用 hook 监听 usePageActive
+  - loading 效果
+  - 监听 onScroll
+  - 公共组件 -> useLoadingOnce usePageActive useAppActive
+  - 统一的 prettier 配置
+```
 
 - 突出 rust 经验
 

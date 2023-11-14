@@ -1,22 +1,26 @@
 /** 1
- * @param {string[]} strs
- * @return {string}
  * 最长公共前缀
+ * @param {string[]} strList
+ * @return {string}
  */
-var longestCommonPrefix = function (strs: string[]) {
-  let result = strs.pop();
-  for (const item of strs) {
-    for (let i = 0; i < result.length; i++) {
-      const char = result[i];
+function longestCommonPrefix(strList: string[]) {
+  let result = strList.pop();
+  if (!result?.length) {
+    return "";
+  }
 
-      if (item.indexOf(char) === -1) {
-        result = result.slice(0, i);
+  for (const item of strList) {
+    for (let i = 0; i < result.length; i++) {
+      const prefix = result.slice(0, i);
+
+      if (item.indexOf(prefix) === -1) {
+        result = result.slice(0, i - 1);
         break;
       }
     }
   }
   return result;
-};
+}
 
 console.log(`1:`, longestCommonPrefix(["flower", "flow", "flight"]));
 
@@ -25,7 +29,7 @@ console.log(`1:`, longestCommonPrefix(["flower", "flow", "flight"]));
  * @return {number}
  * 无重复字符的最长子串
  */
-var lengthOfLongestSubstring = function (s) {
+function lengthOfLongestSubstring(s) {
   let num = 0;
   let cur_str = "";
   for (let char of s) {
@@ -40,7 +44,7 @@ var lengthOfLongestSubstring = function (s) {
     }
   }
   return num;
-};
+}
 
 console.log(`2:`, lengthOfLongestSubstring("pwwkew"));
 
@@ -144,3 +148,53 @@ var restoreIpAddresses = function (s: string) {
 };
 
 console.log(`7:`, restoreIpAddresses(`25525511135`));
+
+type TreeNode = {
+  val: number;
+  left?: TreeNode;
+  right?: TreeNode;
+};
+
+/** 二叉树 */
+const input = [1, 2, 3, 4, 5, 6, 7];
+const level = get2pow(input.length + 1);
+let index: number = 0;
+const node = createNode(level - 1);
+printNode(node);
+
+export function get2pow(num: number) {
+  return Math.floor(Math.log2(num)) + 1;
+}
+
+function createNode(level: number): TreeNode {
+  index++;
+  const cur_node = { val: index } as TreeNode;
+  if (level === 0) {
+    return cur_node;
+  }
+  cur_node.left = createNode(level - 1);
+  cur_node.right = createNode(level - 1);
+  return cur_node;
+}
+function printNode(node: TreeNode, print_self = true) {
+  const { val, left, right } = node;
+  let left_val: number;
+  let right_val: number;
+  if (print_self) {
+    console.log(val);
+  }
+  if (left) {
+    left_val = left.val;
+    console.log(left_val);
+  }
+  if (right) {
+    right_val = right.val;
+    console.log(right_val);
+  }
+  if (left) {
+    printNode(left, false);
+  }
+  if (right) {
+    printNode(right, false);
+  }
+}
