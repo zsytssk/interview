@@ -5,6 +5,7 @@ https://frontendmasters.com/courses/algorithms/linked-list-data-structures/
 ### 数据结构
 
 array | linkList | queque | stack | tree | heap
+我感觉用 rust 来写更舒服一些
 
 ### 算法
 

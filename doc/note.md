@@ -10,6 +10,37 @@
 
 - @ques 有没有 rust 工作？
 
+## 常见的面试题目
+
+- 如何实现一个深拷贝 (cloneDeep)
+
+  - 深度对比
+
+- @ques 居中的方式
+
+- @ques 网站安全
+
+  - 什么是 CSRF 攻击
+
+- @ques Set Map...
+
+- @ques js 基本类型
+
+- @ques 加密 + 防止窃取信息
+
+## 优化简历
+
+### end
+
+- 排序
+
+  - 冒泡排序
+  - binary sort -> quick sorted
+
+- @ques 二分查找法
+
+- @ques sorted array -> binary search
+
 ## 常见的算法
 
 - @todo 数据结构
@@ -19,20 +50,6 @@
 - @todo 算法
 
 -? 二分查找法
-
-## 2023-11-14 17:23:20
-
-- @ques 二分查找法
-
-- @ques sorted array -> binary search
-
-- 排序
-  - 冒泡排序
-  - binary sort -> quick sorted
-
-## 优化简历
-
-### end
 
 - 小程序开发经验
 

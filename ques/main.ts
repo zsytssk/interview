@@ -1,3 +1,54 @@
+export function debounceFn(fn: (...args: any[]) => void, time: number) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      fn(...args);
+    }, time);
+  };
+}
+
+export function debouncePromise(
+  fn: (...args: any[]) => Promise<any>,
+  time: number
+) {
+  let timeout;
+  let resolve_list: Array<(param: any) => void> = [];
+  let reject_list: Array<(param: any) => void> = [];
+  return (...args) => {
+    return new Promise((resolve, reject) => {
+      clearTimeout(timeout);
+      resolve_list.push(resolve);
+      reject_list.push(reject);
+      timeout = setTimeout(() => {
+        fn(...args)
+          .then((data) => {
+            for (const item of resolve_list) {
+              item(data);
+            }
+          })
+          .catch((err) => {
+            for (const item of reject_list) {
+              item(err);
+            }
+          });
+      }, time);
+    });
+  };
+}
+
+export function throttleFn(fn: (...args: any[]) => void, time: number) {
+  let space = Date.now();
+  return (...args) => {
+    let now = Date.now();
+    if (now - space < time) {
+      return;
+    }
+    space = now;
+    fn(...args);
+  };
+}
+
 /** 1
  * 最长公共前缀
  * @param {string[]} strList
